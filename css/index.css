@@ -121,7 +121,7 @@ li{
 }
 
 #submit:hover{
-    background-color: rgb(0, 119, 69);
+    background-color: rgb(0, 108, 52);
 }
 
 .svg{
@@ -203,3 +203,30 @@ li{
     border-radius: 60px;
     margin-left: 250px;
 }
+
+button {
+  background-color: #1ca33e;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100px;
+  cursor: pointer;
+  font-size: 18px;
+  color: ghostwhite;
+  padding: 12px;
+  border-radius: 60px;
+  position: absolute;
+  top: 800px;
+  left: 1700px; /* 調整為可見範圍 */
+}
+
+button:hover {
+  background-color: rgb(0, 108, 52);;
+  color: ghostwhite;
+}
+
+button:focus {
+  outline: none;
+  background-color:  #1ca33e; 
+}
+
