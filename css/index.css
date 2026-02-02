@@ -2,22 +2,24 @@
     box-sizing: border-box;
 }
 body{
+    
     background: rgb(236, 255, 211);
+    
 }
 
 .a{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 48px;
+    font-size: 44px;
     margin-top: 40px;
     font-weight: bold;
     color: rgb(82, 117, 0);
     position: relative;
     z-index: 100;
 }
+   
 
-
-h2{
+ /*h2{
     text-align: center;
     width: 300px;
     text-align: center;
@@ -29,10 +31,23 @@ h2{
     position: absolute;
     margin-top: 10px;
     margin-left: 810px;
- }
+ }*/
+ h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(88, 88, 88);
+    
+    
+    width: 80%; /*修改：避免寫死*/
+    max-width: 300px; /*修改*/
+    margin: 10px auto; /*修改：置中*/
+    position: relative; /*修改：取消 absolute*/
+}
 
-.container{
-    background-color: #fff;
+ /*.container{
+   background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 10px 2px rgb(168, 168, 168);
     width: 650px;
@@ -41,17 +56,34 @@ h2{
     margin-left: 630px;
     margin-top: 100px;
     border-radius: 50%;
-    position: absolute;
+    position: absolute;}*/
+
+
+
+.container{
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px rgb(201, 201, 201);
+    overflow: hidden;      /*內容溢出與裁切*/
+    max-width: 500px;
+    width: 90%;
+    aspect-ratio: 1/1;    /* 高度自動跟寬度一樣，保持正圓 */
+    margin: 30px auto 0;  /* 水平置中 */
+    border-radius: 50%;
+    position: relative;    /* 改掉絕對定位 */
+    text-align: center;
 }
 
+
 .header{
-    padding: 80px;
+    padding: 50px;
+    
+    
 }
 
 #question{
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
+    font-size: 34px;
     text-align: center;
     font-weight: 800;
 }
@@ -64,9 +96,9 @@ ul{
 }
 
 ul li{
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 800;
-    margin: 20px 0;
+    margin: 15px 0;
     
 }
 
@@ -74,7 +106,7 @@ ul li label{
     cursor: pointer;
 }
 
-li :hover{
+li:hover{
     color: rgb(0, 119, 69);
 }
 
@@ -83,10 +115,10 @@ li{
     
 }
 
-.aa{
+.aa{                            /*問題你的答案是?*/
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 650; /*文字粗度*/
     text-align: center;
 }
 
@@ -111,12 +143,12 @@ li{
     color: ghostwhite;
     border:none;
     display: block;
-    width: 120px;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 10px;
+    width: 100px;
+
+    cursor: pointer; /*滑鼠游標屬性*/
+    font-size: 18px;
+    padding: 8px;/*按紐跟字距離*/
+    margin: 10px auto;
     border-radius: 60px;
 }
 
@@ -131,67 +163,34 @@ li{
     position: absolute;
     opacity: 0.3;
     padding-left: 20px;
-    margin-top: 15px;
-}
-
-.br{
-    display: inline;
-    animation:rotate-taichi 1.8s  linear infinite alternate;
 }
 
 @keyframes rotate-taichi {
     from {transform: rotate(-8deg);}
-    to {transform: rotate(8deg); }
+    to {transform: rotate(8deg);}
 }
 
-.cabbage{
-    display: inline;
-    animation:rotate-taichi 1.8s  linear infinite alternate;
-}
-
-@keyframes rotate-taichi {
-    from {transform: rotate(-8deg);}
-    to {transform: rotate(8deg); }
-}
-
-.carrot{
-    display: inline;
-    animation:rotate-taichi 1.8s  linear infinite alternate;
-}
-
-@keyframes rotate-taichi {
-    from {transform: rotate(-8deg);}
-    to {transform: rotate(8deg); }
-}
-.onion{
-    display: inline;
-    animation:rotate-taichi 1.8s  linear infinite alternate;
-}
-
-@keyframes rotate-taichi {
-    from {transform: rotate(-8deg);}
-    to {transform: rotate(8deg); }
-}
+.br,
+.cabbage,
+.carrot,
+.onion,
 .pumpkin{
     display: inline;
-    animation:rotate-taichi 1.8s  linear infinite alternate;
+    animation: rotate-taichi 1.8s linear infinite alternate;
 }
 
-@keyframes rotate-taichi {
-    from {transform: rotate(-8deg);}
-    to {transform: rotate(8deg); }
-}
-
-
-.ss{
+.ss{ 
+/*你總共答對了幾題* 跑位問題罪魁禍首
     margin-left: 190px;
-    margin-top: 280px;
+    margin-top: 280px;*/
+    padding: 100px;
+    text-align: center;
     color: rgb(0, 119, 69);
-    
+
    }
 
 
-.container button{
+/*.container button{ 總共答對的最後按鈕
     background-color: rgb(7, 156, 87);
     color: ghostwhite;
     border:none;
@@ -204,7 +203,70 @@ li{
     margin-left: 250px;
 }
 
-button {
+  .container button{ /*總共答對的最後按鈕*
+    background-color: rgb(7, 156, 87);
+    color: ghostwhite;
+    border:none;
+    display: block;
+    max-width: 120px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 25px;
+    position: absolute;
+
+    margin: 20px auto;  /*離圓的距離*
+}*/
+  .container button{ /*r開頭最後按鈕*/
+    background-color: rgb(7, 156, 87);
+    color: ghostwhite;
+    font-size: 18px;
+    border:none;
+    border-radius: 25px;
+    display: block;
+    width: 100px;/*按鈕寬*/
+    padding:  20px;
+    padding-top: 12px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+}
+
+.button2{
+    background-color: rgb(7, 156, 87);
+    font-size: 18px;
+    color: ghostwhite;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;    /* 距離底部 20px */
+    right: 30px; 
+}
+  /*button{    /*程式說明按鈕
+  background-color: rgb(7, 156, 87);
+  font-size: 24px;
+  color: ghostwhite;
+  max-width: 120px;
+  
+  border: none;
+  display: block;
+  width: 80%; /* %可伸縮 *
+  height: 50px; 
+  border-radius: 25px;
+  cursor: pointer;
+ 
+  margin: 40px auto;    /*響應式*
+  position: fixed;     /* 固定在視窗，不會被頁面滾動影響 *
+  z-index: 1000;
+  bottom: 20px;          /* 距離視窗底部  *
+  right: 60px;           /* 距離視窗右邊  *
+}
+*/
+
+/*button {
   background-color: #1ca33e;
   color: #fff;
   border: none;
@@ -217,11 +279,12 @@ button {
   border-radius: 60px;
   position: absolute;
   top: 800px;
-  left: 1700px; /* 調整為可見範圍 */
+  left: 1700px; /* 調整為可見範圍 
 }
+*/
 
 button:hover {
-  background-color: rgb(0, 108, 52);;
+  background-color: rgb(4, 55, 29);;
   color: ghostwhite;
 }
 
@@ -230,3 +293,77 @@ button:focus {
   background-color:  #1ca33e; 
 }
 
+
+
+
+/* 修正：重寫響應式斷點 */
+/* 小螢幕 (手機) */
+@media screen and (max-width: 540px) {
+    .a {
+        font-size: 32px; /* 修正：標題縮小 */
+        margin-top: 20px;
+    }
+    
+    h2 {
+        font-size: 16px; /* 修正：副標題縮小 */
+    }
+    
+    .container {
+        width: 90%; /* 修正：縮小原尺寸90% */
+        margin: 20px auto 0;
+    }
+    
+    .header {
+        padding: 30px 20px; /* 修正：減少內距 */
+    }
+    
+    #question {
+        font-size: 24px; /* 修正：問題文字縮小 */
+    }
+    
+    ul li {
+        font-size: 18px; /* 修正：選項文字縮小 */
+    }
+    
+    .container button {
+        width: 100px; /* 修正：按鈕縮小 */
+        font-size: 20px;
+        bottom: 20px;
+    }
+    
+    .ss {
+        padding: 60px 20px; /* 修正：調整結果頁面距 */
+        font-size: 20px;
+    }
+}
+
+/* 中等螢幕 (平板) */
+@media screen and (min-width: 541px) and (max-width: 768px) {
+    .a {
+        font-size: 40px;
+    }
+    
+    .container {
+        max-width: 90%; /* 修正：適中的容器大小 */
+    }
+    
+    #question {
+        font-size: 28px;
+    }
+    
+    ul li {
+        font-size: 20px;
+    }
+    
+    .ss {
+        padding: 80px 30px; /* 修正：調整結果頁面距 */
+        font-size: 22px;
+    }
+}
+
+/* 修正：添加大螢幕優化 */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 500px; /* 修正：大螢幕時稍微放大 */
+    }
+}
