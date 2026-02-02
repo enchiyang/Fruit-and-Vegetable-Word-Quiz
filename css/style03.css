@@ -42,6 +42,7 @@ h1{
     position: absolute;
     border: 8px solid rgb(0, 119, 69);
     /*padding: 3px;*/
+    border-radius: 20px;
     margin: 0;
     overflow: hidden;
     -webkit-user-select:none;
@@ -127,23 +128,23 @@ a {
 
 .b1{
     width: 1520px;
-    height: 750px;
+    height: 740px;
     /* background:  rgb(194, 243, 255); */
     
 }
 .b2{
     width: 1520px;
-    height: 750px;
+    height: 740px;
     /* background:  rgb(194, 243, 255); */
 }
 .b3{
     width: 1520px;
-    height: 750px;
+    height: 740px;
     /* background:  rgb(194, 243, 255); */
 }
 .b4{
     width: 1520px;
-    height: 750px;
+    height: 740px;
     /* background:  rgb(194, 243, 255); */
 }
 
