@@ -118,7 +118,7 @@ function check() {
     msg.innerHTML = "答對了！"+Q(q)+"="+A(q);
     correct ++;
   } else {
-    msg.innerHTML = "答錯了！"+Q(q)+"="+A(q)+"喔!";
+    msg.innerHTML = "答錯了！"+Q(q)+"="+A(q)+"喔！";
     wrong ++;
   }
 
@@ -153,7 +153,7 @@ function loadQuiz(){
     msg.innerHTML = "答對了！"+Q(q)+"="+A(q);
     correct ++;
     } else {
-    msg.innerHTML = "答錯了！"+Q(q)+"="+A(q)+"喔!";
+    msg.innerHTML = "答錯了！"+Q(q)+"="+A(q)+"喔！";
     wrong ++;
     }
 
